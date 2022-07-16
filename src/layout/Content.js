@@ -1,7 +1,6 @@
-import "./Content.css";
 import React, { Component } from "react";
-import Categories from "../../Mockdata/Categories.json";
-import showHomepage from "../../Mockdata/showHomepage.json";
+import Categories from "../Mockdata/Categories.json";
+import showHomepage from "../Mockdata/showHomepage.json";
 export default class Content extends Component {
   render() {
     return (
