@@ -14,7 +14,7 @@ export default class Header extends Component {
                 <div className="header_center">
                     <div className="topnav">
                         <div className="image_logo">
-                            <img src="https://huydungmobile.com/wp-content/uploads/2019/02/LogoHuyDungMobile4.png" alt="logo" />
+                            <img src="image/logo.PNG" alt="logo" />
                         </div>
                         <div className="centerDiv">
                             <div className="all">

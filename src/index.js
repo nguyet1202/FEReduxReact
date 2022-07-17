@@ -4,6 +4,7 @@ import './index.css';
 import Footer from './layout/footer';
 import Header from './layout/Header';
 import Content from './layout/Content';
+import Thaypin from './layout/Thaypin';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter} from 'react-router-dom';
 
@@ -13,7 +14,8 @@ root.render(
   // <React.StrictMode>
   <BrowserRouter>
     <Header/>
-    <Content/>
+    {/* <Content/> */}
+    <Thaypin/>
     <Footer/>
   </BrowserRouter>
   // </React.StrictMode>

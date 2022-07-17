@@ -23,6 +23,7 @@ export default class Content extends Component {
               <>
                 <div className="prd">
                   <img src={item.image} key={index} />
+                  
                   <div className="title-wrapper">
                     <p key={index}>{item.name}</p>
                   </div>
