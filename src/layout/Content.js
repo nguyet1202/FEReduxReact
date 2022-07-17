@@ -1,7 +1,6 @@
-import "./Content.css";
 import React, { Component } from "react";
-import Categories from "../../Mockdata/Categories.json";
-import showHomepage from "../../Mockdata/showHomepage.json";
+import Categories from "../Mockdata/Categories.json";
+import showHomepage from "../Mockdata/showHomepage.json";
 export default class Content extends Component {
   render() {
     return (
@@ -24,6 +23,7 @@ export default class Content extends Component {
               <>
                 <div className="prd">
                   <img src={item.image} key={index} />
+                  
                   <div className="title-wrapper">
                     <p key={index}>{item.name}</p>
                   </div>
