@@ -1,0 +1,40 @@
+/*# sourceMappingURL=Content.css.map */
+.viewallcat{
+    display: flex;
+    background-color: rgb(56, 56, 56);
+    gap: 10px;
+    padding: 0 4rem;
+    color: white;
+}
+.viewallcat-tabled{
+    display: flex;
+    background-color: rgb(56, 56, 56);
+    gap: 10px;
+    padding: 0 4rem;
+    color: white;
+
+}
+.link_a{
+    color: white;
+}
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 20px;
+}
+.price-wrapper{
+    color: red;
+    text-align: center;
+}
+
+.prd{
+    
+    background-color: #fff;    
+    width: 193px;
+    text-align: center;
+    
+}
+.prd :hover{
+    box-shadow: 1px 0px 1px 0px;
+   
+}

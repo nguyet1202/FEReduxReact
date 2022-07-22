@@ -1,5 +1,6 @@
 import React,{ Component} from "react";
-import '../assets/css/headerStyles.css';
+
+import { Link } from 'react-router-dom';
 export default class Header extends Component {
     render() {
         return (
@@ -15,17 +16,21 @@ export default class Header extends Component {
                 <div className="header_center">
                     <div className="topnav">
                         <div className="image_logo">
-                            <img src="https://huydungmobile.com/wp-content/uploads/2019/02/LogoHuyDungMobile4.png" alt="logo" />
+                            <img src="image/logo.PNG" alt="logo" />
                         </div>
                         <div className="centerDiv">
                             <div className="all">
                                 <div class="dropdown">
                                     <button type="submit" className="dropbtn">All<i className="fa fa-caret-down" /></button>
                                     <div class="dropdown-content">
-                                        <a href="#">Thay màn hình-ép kính</a>
-                                        <a href="#">Thay vỏ</a>
-                                        <a href="#">Thay pin</a>
-                                        <a href="#">Phần cứng</a>
+                                        <Link to ="/ThayMH_EK" className="link_a" >Thay Màn Hình-Ép Kính </Link>
+
+                                        <Link to ="/ThayPin" className="link_a" >Thay Pin </Link>
+
+                                        <Link to ="/ThayVo" className="link_a" >Thay Vỏ </Link>
+
+                                        <Link to ="/ThayPhanCung" className="link_a" >Thay Phần Cứng </Link>
+
                                     </div>
                                 </div>
                             
@@ -36,14 +41,13 @@ export default class Header extends Component {
                                         </form>
                                 </div>
                             </div>
-                            <div className="menu_center">
+                           
+                        </div>
+                        <div className="menu_center">
                                 <p><a href="#">Giới thiệu</a>|</p>
-                                <p><a href="#">Hỏi Đáp</a></p>
-                                
-                               
+                                <p><a href="#">Hỏi Đáp</a></p>                          
                                 
                             </div>
-                        </div>
                     </div>
                     
                 </div>
@@ -58,7 +62,8 @@ export default class Header extends Component {
                                     <a className="h_nav_navLink" href="#">
                                         <div className="h_navImage">
                                         <img src="https://cdn.iconscout.com/icon/free/png-256/phone-2513365-2104689.png" alt="" /> 
-                                        <p>Thay màn hình-ép kính</p>
+                                        <Link to ="/ThayMH_EK" className="link_a" >Thay Màn Hình-Ép Kính </Link>
+
                                         </div>
                                     </a>
                                 </li>
@@ -66,7 +71,8 @@ export default class Header extends Component {
                                     <a className="h_nav_navLink" href="#">
                                         <div className="h_navImage">
                                         <img src="https://phatlocmobile.vn/image/cache/catalog/a-iphone/thay-vo-iphone-6-lay-ngay-800x800.png" alt="" /> 
-                                        <p>Thay vỏ</p>
+                                        <Link to ="/ThayVo" className="link_a" >Thay Vỏ </Link>
+
                                         </div>
                                     </a>
                                 </li>
@@ -74,7 +80,7 @@ export default class Header extends Component {
                                     <a className="h_nav_navLink" href="#">
                                         <div className="h_navImage">
                                         <img src="https://www.9mobile.vn/sites/default/files/2019-01/bang_gia-thay-pin.png" alt="" /> 
-                                        <p>Thay pin</p>
+                                        <Link to ="/ThayPin" className="link_a" >Thay Pin </Link>
                                         </div>
                                     </a>
                                 </li>
@@ -82,7 +88,8 @@ export default class Header extends Component {
                                     <a className="h_nav_navLink" href="#">
                                         <div className="h_navImage">
                                         <img src="https://phatlocmobile.vn/image/cache/catalog/a-iphone/thay-vo-iphone-6-lay-ngay-800x800.png" alt="" /> 
-                                        <p>Phần cứng</p>
+                                        <Link to ="/ThayPhanCung" className="link_a" >Thay Phần Cứng </Link>
+
                                         </div>
                                     </a>
                                 </li>

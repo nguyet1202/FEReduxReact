@@ -1,4 +1,4 @@
-
+/* Footer */
 .content{
     padding-left: 150px;
 }
@@ -35,3 +35,58 @@
     
 }
 
+/*---------------------screen detail ------------------*/
+.ScreenDetail{
+    position: relative;
+    margin-left: 300px;
+    margin-right: 300px;
+   
+
+}
+.linking{
+    color: black;
+}
+.star{
+    color: yellow;
+}
+.imagee{
+    width: 500px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+   
+}
+
+.detail_item{
+    background-color: #fff;    
+    width: 1000px;
+    justify-content: center;
+}
+.detail_item1{
+    display: grid;
+    grid-template-columns: 700px 700px;
+}
+.detail_item2{
+    display: grid;
+    grid-template-columns: 700px 700px;
+}
+.price{
+    text-align: center;
+   
+}
+.title{
+    text-align: center;
+   
+}
+.detail_contact{
+    align-items: center;
+}
+.detail_contact{
+    background-color: yellow;
+    text-align: center;
+}
+.detail_contact_a{
+    color: black;
+}
