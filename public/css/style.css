@@ -45,6 +45,10 @@
 }
 .linking{
     color: black;
+    margin-left: 65px;
+}
+.Itemlinking{
+    color: black;
 }
 .star{
     color: yellow;

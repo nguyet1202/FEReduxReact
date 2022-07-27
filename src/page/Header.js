@@ -7,16 +7,16 @@ export default class Header extends Component {
             <div className="header">
                 <div className="header_top">
                     <div className="header_top_left">
-                    <h5>399 Tây Thạch, Phường Tây Thạch, Quận Tân Phú, TP.HCM</h5>
+                    <h6>399 Tây Thạch, Phường Tây Thạch, Quận Tân Phú, TP.HCM</h6>
                     </div>
                     <div className="header_top_right">
-                    <h5>Thời gian làm việc: 08:00 - 18:00</h5>
+                    <h6>Thời gian làm việc: 08:00 - 18:00</h6>
                     </div>
                 </div>
                 <div className="header_center">
                     <div className="topnav">
                         <div className="image_logo">
-                            <img src="image/logo.PNG" alt="logo" />
+                            <img src="https://ndcmobile.com/uploads/source//logo-moi-trong.png" alt="logo" />
                         </div>
                         <div className="centerDiv">
                             <div className="all">
@@ -29,14 +29,13 @@ export default class Header extends Component {
 
                                         <Link to ="/ThayVo" className="link_a" >Thay Vỏ </Link>
 
-                                        <Link to ="/ThayPhanCung" className="link_a" >Thay Phần Cứng </Link>
+                                        <Link to ="/Thayphancung" className="link_a" >Thay Phần Cứng </Link>
 
                                     </div>
-                                </div>
-                            
+                                </div>                            
                                 <div className="search">
                                         <form action>
-                                            <input id="h_inputSearch"type="text" placeholder="Tìm kiếm.." name="search" />
+                                            <input id="h_inputSearch" type="text" placeholder="Tìm kiếm.." name="search" />
                                             <button type="submit"><i className="fa fa-search" /></button>
                                         </form>
                                 </div>
@@ -44,7 +43,7 @@ export default class Header extends Component {
                            
                         </div>
                         <div className="menu_center">
-                                <p><a href="#">Giới thiệu</a>|</p>
+                                <p><a href="AboutUs">Giới thiệu</a>|</p>
                                 <p><a href="#">Hỏi Đáp</a></p>                          
                                 
                             </div>

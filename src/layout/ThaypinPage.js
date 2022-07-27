@@ -9,14 +9,14 @@ export default class ThaypinPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      pins: [],
+      battery: [],
     };
   }
   async componentDidMount() {
     await axios
-      .get(`https://6290b07827f4ba1c65bf4562.mockapi.io/service/1/products`)
+      .get(`http://127.0.0.1:8000/api/products`)
       .then((res) => {
-        this.setState(() => ({ pins: res.data }));
+        this.setState(() => ({ battery: res.data }));
       });
   }
   render() {
@@ -24,44 +24,46 @@ export default class ThaypinPage extends Component {
         <div>
             <Header></Header>
                 <div className="Content">
+                    <nav className="linking">
+                        <a className="Itemlinking" href="http://localhost:3000/">Trang chủ</a>
+                        <span className="divider">/</span>
+                        <a className="Itemlinking" href="#">Thay màn hình - ép kính</a>
+                    </nav>
+                    <div></div>
                     <br></br>
                     <div className="container">
-                    {this.state.pins.map((products, index) => (
+                    {this.state.battery.map((products, index) => (
                         <div className="prd" key={index}>
                         <img
                             className="image-wrapper"
                             style={{ width: "200px", height: "200px" }}
-                            src={products.image}
+                            src={products.img}
                             alt="file"
                         ></img>
-                        <p className="name-wrapper">{products.proName}</p>
-                        <p>{products.description}</p>
+                        <p className="name-wrapper">{products.product_name}</p>
+
                         <div>
-                            <span className="price-wrapper">
-                            Price: {products.price}VND
-                            </span>
+                            <span className="price-wrapper">{products.price}VND</span>
                         </div>
                         </div>
                     ))}
                     </div>
                     <br></br>
-                
                     <br></br>
                     <div className="container">
-                    {this.state.pins.map((products, index) => (
+                    {this.state.battery.map((products, index) => (
                         <div className="prd" key={index}>
                         <img
                             className="image-wrapper"
                             style={{ width: "200px", height: "200px" }}
-                            src={products.image}
+                            src={products.img}
                             alt="file"
                         ></img>
-                        <p className="name-wrapper">{products.proName}</p>
+                        <p className="name-wrapper">{products.product_name}</p>
 
                         <div>
                             <span className="price-wrapper">{products.price}VND</span>
                         </div>
-                        <p className="des-wrapper">{products.description}</p>
                         </div>
                     ))}
                     </div>

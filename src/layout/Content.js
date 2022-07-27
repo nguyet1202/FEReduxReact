@@ -14,133 +14,79 @@ export default class Content extends Component {
     };
   }
   async componentDidMount() {
-    await axios
-      .get(`https://6290b07827f4ba1c65bf4562.mockapi.io/service/1/products`)
-      .then((res) => {
-        this.setState(() => ({ phones: res.data }));
-      });
+    await axios.get(`http://127.0.0.1:8000/api/products`).then((res) => {
+      this.setState(() => ({ phones: res.data }));
+    });
   }
   render() {
+    console.log(this.state);
     return (
-  <div>
-<Header></Header>
-      <div className="Content">
-        <div className="viewallcat">
-          <div className="viewallcat">
-            <a className="titel">Sửa Điện Thoại</a>
-            <br />
-            <a className="link_a" href="#">
-              Thay ép mặt kính
-            </a>
-            <br />
-            <a className="link_a" href="#">
-              Thay cảm ứng
-            </a>
-            <br />
-            <a className="link_a" href="#">
-              Thay màn hình
-            </a>
-            <br />
-            <a className="link_a" href="#">
-              Thay kính lưng
-            </a>
-            <br />
-           
-            <a className="link_a" href="#">
-              Thay pin
-            </a>
-            <br />
-            <a className="link_a" href="#">
-              Thay camera
-            </a>
-            <br />
-            <a className="link_a" href="#">
-              Thay chân sạc
-            </a>
-            <br />
-            <a className="link_a" href="#">
-              Xem tất cả;
-            </a>
+      <div>
+        <Header></Header>
+        <br></br>
+        <div className="Content">
+          <h2 className="titleType">SỬA ĐIỆN THOẠI</h2>
+          <br></br>
+          <div className="container">
+            {this.state.phones.map((product, index) => {
+              var cate = "";
+              switch (product.service_id) {
+                case 1: cate = "ThayvoDetail"; break;
+                case 2: cate = "ThaykinhDetail"; break;
+                case 3: cate = "ThaypinDetail"; break;
+                case 4: cate = "ThayphancungDetail"; break;
+              }
+              return (
+                <div className="prd" key={index}>
+                  <Link to={`/${cate}/${index}`}>
+                    <img
+                      className="image-wrapper"
+                      style={{ width: "200px", height: "200px" }}
+                      src={product.img}
+                      alt="file"
+                    ></img>
+                    <p className="name-wrapper">{product.product_name}</p>
+                    <div>
+                      <span className="price-wrapper">{product.price}VND</span>
+                    </div>
+                  </Link>
+                </div>
+              );
+            })}
           </div>
+          <br></br>
+          <h2 className="titleType">SỬA TABLET</h2>
+          <br></br>
+          <div className="container">
+          {this.state.phones.map((product, index) => {
+              var cate = "";
+              switch (product.service_id) {
+                case 1: cate = "ThayvoDetail"; break;
+                case 2: cate = "ThaykinhDetail"; break;
+                case 3: cate = "ThaypinDetail"; break;
+                case 4: cate = "ThayphancungDetail"; break;
+              }
+              return (
+                <div className="prd" key={index}>
+                  <Link to={`/${cate}/${index}`}>
+                    <img
+                      className="image-wrapper"
+                      style={{ width: "200px", height: "200px" }}
+                      src={product.img}
+                      alt="file"
+                    ></img>
+                    <p className="name-wrapper">{product.product_name}</p>
+                    <div>
+                      <span className="price-wrapper">{product.price}VND</span>
+                    </div>
+                  </Link>
+                </div>
+              );
+            })}
+          </div>
+          <br></br>
         </div>
-        <br></br>
-        <div className="container">
-          {this.state.phones.map((products, index) => (
-            <div className="prd" key={index}>
-              <img
-                className="image-wrapper"
-                style={{ width: "200px", height: "200px" }}
-                src={products.image}
-                alt="file"
-              ></img>
-              <p className="name-wrapper">{products.proName}</p>
-              <p>{products.description}</p>
-              <div>
-                <span className="price-wrapper">
-                  Price: {products.price}VND
-                </span>
-              </div>
-            </div>
-          ))}
-        </div>
-        <br></br>
-        <div className="viewallcat-tabled">
-          <a className="titel">Sửa Laptop</a>
-          <br />
-          <a className="link_a" href="#">
-            Thay ép mặt kính
-          </a>
-          <br />
-          <a className="link_a" href="#">
-            Thay cảm ứng
-          </a>
-          <br />
-          <a className="link_a" href="#">
-            Thay màn hình
-          </a>
-          <br />
-          <a className="link_a" href="#">
-            Thay kính lưng
-          </a>
-          <br />
-          <a className="link_a" href="#">
-            Thay pin
-          </a>
-          <br />
-          <a className="link_a" href="#">
-            Thay camera
-          </a>
-          <br />
-          <a className="link_a" href="#">
-            Thay chân sạc
-          </a>
-          <br />
-          <a className="link_a" href="#">
-            Xem tất cả;
-          </a>
-        </div>
-        <br></br>
-        <div className="container">
-          {this.state.phones.map((products, index) => (
-            <div className="prd" key={index}>
-              <img
-                className="image-wrapper"
-                style={{ width: "200px", height: "200px" }}
-                src={products.image}
-                alt="file"
-              ></img>
-              <p className="name-wrapper">{products.proName}</p>
-
-              <div>
-                <span className="price-wrapper">{products.price}VND</span>
-              </div>
-              <p className="des-wrapper">{products.description}</p>
-            </div>
-          ))}
-        </div>
-        <br></br>
-      </div>
-      <Footer></Footer>
+        <Footer></Footer>
       </div>
     );
   }

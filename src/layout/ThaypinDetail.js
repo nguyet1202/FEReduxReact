@@ -1,29 +1,68 @@
 import React, { Component } from "react";
+import axios from "axios";
+import Header from "../page/Header";
+import Footer from "../page/Footer";
+import { useParams } from "react-router-dom";
 
-export default class Content extends Component {
+class ThaypinDetail extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            isLoad:false,
+          prodetail: {},
+        };
+      }
+      async componentDidMount() {
+        const { params } = this.props;
+        await axios
+          .get(`http://127.0.0.1:8000/api/products/${params.id}`)
+          .then((res) => {
+            console.log(params.id);
+            this.setState(() => ({ prodetail: res.data,isLoad:true }));
+          });
+      }
     
     render() {
         return (
-            <div className="ScreenDetail">
+            <div>
+                <Header></Header>
+                <br></br>
+    
+                <div className="ScreenDetail">
                 <div className="ScreenDetail_item">
                     <nav className="linking">
-                        <a className="linking" href="http://localhost:3000/">Trang chủ</a>
+                        <a className="Itemlinking" href="http://localhost:3000/">Trang chủ</a>
                         <span className="divider">/</span>
-                        <a className="linking" href="#">Sửa điện thoại SamSung</a>
+                        <a className="Itemlinking" href="#">Sửa điện thoại SamSung</a>
                         <span className="divider">/</span>
-                        <a href="#" className="linking" >Thay pin</a>
-                    </nav>
-                    <div></div>                   
-                    <div className="detail_item">
+                        <a href="#" className="linItemlinkingking" >Thay pin</a>
+                        <span className="divider">/</span>
+                        <a href="#" className="Itemlinking" >Chi tiết thay pin</a>
+                    </nav><br></br>
+                    <div>
+
+                        </div>                   
+                    
+                        {this.state.isLoad ?     
+                        <div className="productDetail">
+                            
+                            <div className="proDetail">
+                                <img
+                                    className="image-wrapper"
+                                    style={{ width: "200px", height: "200px" }}
+                                    src={this.state.prodetail.img}
+                                    alt="file"
+                                ></img>
+                                <p className="name-wrapper">{this.state.prodetail.product_name}</p>
+
+                                <div>
+                                    <span className="price-wrapper">{this.state.prodetail.price}VND</span>
+                                </div>
+                                <p className="des-wrapper">{this.state.prodetail.description}</p>
+                                </div>
                         
-                        <p ><img className="image" src="https://cdn.fastcare.vn/fastcare/2022/04/thay-pin-iphone-8-plus-fc.jpg" /></p>
-                        <div className="title">
-                            <p><b>Độ vỏ iPhone Xs Max lên iPhone 13 Pro Max</b></p>
-                        </div>
-                        <div className="price">
-                            <p><b>2.300.000đ</b></p>
-                        </div>
-                    </div>     
+                        </div>: "loading..."}
+
                     <hr></hr>
                     <div className="note">
                         <p><b>Giá bao gồm công thay và bảo hành, phát sinh thêm chi phí nào khác</b></p>
@@ -56,12 +95,16 @@ export default class Content extends Component {
                     <br></br>
                 
                     <div className="detail_contact">
-                        <a href="#" className="detail_contact_a"> Liên hệ trực tiếp</a>
+                        <a href="InforForm" className="detail_contact_a"> Liên hệ trực tiếp</a>
                     
                     </div>      
                 </div>    
         
             </div>
+            <Footer></Footer>
+            </div>
+           
         );
     }
 }
+export default (props) => <ThaypinDetail {...props} params={useParams()}/>

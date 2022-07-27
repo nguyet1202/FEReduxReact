@@ -1,26 +1,31 @@
 /*# sourceMappingURL=Content.css.map */
-.viewallcat{
-    display: flex;
-    background-color: rgb(56, 56, 56);
-    gap: 10px;
-    padding: 0 4rem;
-    color: white;
+.Content{
+    width:100% ;
+    justify-content: space-between;
 }
-.viewallcat-tabled{
-    display: flex;
-    background-color: rgb(56, 56, 56);
-    gap: 10px;
-    padding: 0 4rem;
-    color: white;
 
+.titel {   
+    padding: auto;
+    margin: auto;
+    padding-top: 15px;
+    text-align: center;
+    width: 50%;
+}
+.titel:hover{
+    color:rgb(239, 207, 24);
 }
 .link_a{
     color: white;
 }
 .container {
+    margin-left: 30px;
+    margin-right: 30px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+    justify-content: space-evenly;
+    gap: 30px;
+    width: 100%;
+    
 }
 .price-wrapper{
     color: red;
@@ -28,13 +33,20 @@
 }
 
 .prd{
-    
+
     background-color: #fff;    
-    width: 193px;
     text-align: center;
-    
+    width: 16vw;
+    transition: transform .5s ease-in-out;
+
 }
-.prd :hover{
-    box-shadow: 1px 0px 1px 0px;
+.prd:hover {
+-ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.1); 
    
+}
+.titleType{
+    text-align: center;
+    color:rgb(199, 65, 24);
 }
