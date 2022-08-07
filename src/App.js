@@ -2,24 +2,26 @@
 import React, { Component }  from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Content from './layout/Content';
-import ThaypinPage from './layout/ThaypinPage';
-import ThayvoPage from './layout/ThayvoPage';
-import ThayMH_EKPage from './layout/ThayMH_EKPage';
-import ThayphancungPage from './layout/ThayphancungPage';
-import ThaypinDetail from './layout/ThaypinDetail';
-import ThaykinhDetail from './layout/ThaykinhDetail';
-import ThayvoDetail from './layout/ThayvoDetail';
-import ThayphancungDetail from './layout/ThayphancungDetail';
-import AboutUs from './layout/AboutUs';
-import InforForm from './layout/InforForm';
-// import Create from './Pages/Create';
+import Content from './pages/Content';
+import ThaypinPage from './pages/ThaypinPage';
+import ThayvoPage from './pages/ThayvoPage';
+import ThayMH_EKPage from './pages/ThayMH_EKPage';
+import ThayphancungPage from './pages/ThayphancungPage';
+import ThaypinDetail from './pages/ThaypinPage';
+import ThaykinhDetail from './pages/ThaykinhDetail';
+import ThayvoDetail from './pages/ThayvoDetail';
+import ThayphancungDetail from './pages/ThayphancungDetail';
+import AboutUs from './pages/AboutUs';
+import InforForm from './pages/InforForm';
+import Search from './pages/Search';
+
 
 function App() {
     return (
         <Routes>
-            <Route path="/" element={<Content />} />
-            <Route path="/ThayPin" element={<ThaypinPage />} />
+
+            <Route path="/" element={<Content/>} />
+            <Route path="/ThayPin" element={<ThaypinPage/>} />
             <Route path="/ThayVo" element={<ThayvoPage />} />
             <Route path="/ThayMH_EK" element={<ThayMH_EKPage />} />
             <Route path="/ThayPhanCung" element={<ThayphancungPage/>} />
@@ -29,6 +31,8 @@ function App() {
             <Route path="/Thayphancung" element={<ThayphancungDetail/>} />
             <Route path="/AboutUs" element={<AboutUs/>}/>
             <Route path="/InforForm" element={<InforForm/>} />
+            <Route path="/Search" element={<Search/>} />
+
         </Routes>
     );
 }

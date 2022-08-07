@@ -1,6 +1,6 @@
 import React,{ Component} from "react";
-import Header from "../page/Header";
-import Footer from "../page/Footer";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 export default class ThaykinhDetail extends Component {
     render() {
         return (

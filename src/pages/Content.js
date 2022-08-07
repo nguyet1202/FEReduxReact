@@ -1,0 +1,78 @@
+import React, { Component } from "react";
+import axios from "axios";
+import { Link } from "react-router-dom";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+
+const ProductList = ({title, list}) => {
+  return (
+    <div className="product-list">
+      <h2 className="title-content">{title}</h2>
+      <br></br>
+      <div className="container">
+        {list.map((product, index) => {
+          var cate = "";
+          switch (product.service_id) {
+            case 2:
+              cate = "ThaykinhDetail";
+              break;
+            case 3:
+              cate = "ThaypinDetail";
+              break;
+            case 4:
+              cate = "ThayphancungDetail";
+              break;
+            default:
+              cate = "ThayvoDetail";
+          }
+          return (
+            <div className="prd" key={index}>
+              <Link to={`/${cate}/${index}`}>
+                <img
+                  className="prd-img"
+                  style={{ width: "200px", height: "200px" }}
+                  src={product.img}
+                  alt="file"
+                ></img>
+                <p className="prd-name">{product.product_name}</p>
+                <div>
+                  <span className="prd-price">{product.price} VND</span>
+                </div>
+              </Link>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+export default class Content extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      products: [],
+      services: []
+    };
+  }
+  async componentDidMount() {
+    const services = (await axios.get("http://127.0.0.1:8000/api/services")).data;
+    const products = (await axios.get(`http://127.0.0.1:8000/api/products`)).data;
+
+    this.setState({services, products})
+  }
+  render() {
+    console.log(this.state);
+    return (
+      <div>
+        <Header></Header>
+        <br></br>
+        <div className="contents">
+          {this.state.services.map((service) => (
+            <ProductList title={service.service_name} list={this.state.products.filter(product => product.service_id === service.id)} />
+          ))}
+        </div>
+        <Footer></Footer>
+      </div>
+    );
+  }
+}

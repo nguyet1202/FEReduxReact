@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
-import Header from "../page/Header";
-import Footer from "../page/Footer";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 import { useParams } from "react-router-dom";
 
 class ThaypinDetail extends Component {

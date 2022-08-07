@@ -1,22 +1,20 @@
 import React, { Component } from "react";
-import Categories from "../Mockdata/Categories.json";
-// import showHomepage from "../Mockdata/showHomepage.json";
 import axios from "axios";
-import Header from "../page/Header";
-import Footer from "../page/Footer";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
-export default class ThayphancungPage extends Component {
+export default class ThayMH_EKPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      hardWares: [],
+      screens: [],
     };
   }
   async componentDidMount() {
     await axios
-      .get(`http://127.0.0.1:8000/api/products`)
+      .get(`http://127.0.0.1:8000/api/service/2`)
       .then((res) => {
-        this.setState(() => ({ hardWares: res.data }));
+        this.setState(() => ({ screens: res.data }));
       });
   }
   render() {
@@ -25,14 +23,14 @@ export default class ThayphancungPage extends Component {
             <Header></Header>
                 <div className="Content">
                     <nav className="linking">
-                        <a className="Itemlinking" href="http://localhost:3000/">Trang chủ</a>
-                        <span className="divider">/</span>
-                        <a className="Itemlinking" href="#">Thay màn hình - ép kính</a>
+                        <a className="itemLinking" href="http://localhost:3000/">Trang chủ</a>
+                        <span className="divider">\</span>
+                        <a className="itemLinking" href="#">Thay màn hình - ép kính</a>
                     </nav>
                     <div></div>
                     <br></br>
                     <div className="container">
-                    {this.state.hardWares.map((products, index) => (
+                    {this.state.screens.map((products, index) => (
                         <div className="prd" key={index}>
                         <img
                             className="image-wrapper"
@@ -50,9 +48,9 @@ export default class ThayphancungPage extends Component {
                     </div>
                     <br></br>
                 
-                    <br></br>
+                    {/* <br></br>
                     <div className="container">
-                    {this.state.hardWares.map((products, index) => (
+                    {this.state.screens.map((products, index) => (
                         <div className="prd" key={index}>
                         <img
                             className="image-wrapper"
@@ -61,13 +59,12 @@ export default class ThayphancungPage extends Component {
                             alt="file"
                         ></img>
                         <p className="name-wrapper">{products.product_name}</p>
-
                         <div>
                             <span className="price-wrapper">{products.price}VND</span>
                         </div>
                         </div>
                     ))}
-                    </div>
+                    </div> */}
                     <br></br>
                 </div>
             <Footer></Footer>

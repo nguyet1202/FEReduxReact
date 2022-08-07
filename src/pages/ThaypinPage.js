@@ -1,22 +1,21 @@
 import React, { Component } from "react";
-import Categories from "../Mockdata/Categories.json";
-// import showHomepage from "../Mockdata/showHomepage.json";
-import axios from "axios";
-import Header from "../page/Header";
-import Footer from "../page/Footer";
 
-export default class ThayvoPage extends Component {
+import axios from "axios";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+
+export default class ThaypinPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      changeCase: [],
+      battery: [],
     };
   }
   async componentDidMount() {
     await axios
       .get(`http://127.0.0.1:8000/api/products`)
       .then((res) => {
-        this.setState(() => ({ changeCase: res.data }));
+        this.setState(() => ({ battery: res.data }));
       });
   }
   render() {
@@ -32,7 +31,7 @@ export default class ThayvoPage extends Component {
                     <div></div>
                     <br></br>
                     <div className="container">
-                    {this.state.changeCase.map((products, index) => (
+                    {this.state.battery.map((products, index) => (
                         <div className="prd" key={index}>
                         <img
                             className="image-wrapper"
@@ -49,10 +48,9 @@ export default class ThayvoPage extends Component {
                     ))}
                     </div>
                     <br></br>
-                
                     <br></br>
                     <div className="container">
-                    {this.state.changeCase.map((products, index) => (
+                    {this.state.battery.map((products, index) => (
                         <div className="prd" key={index}>
                         <img
                             className="image-wrapper"

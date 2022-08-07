@@ -1,22 +1,20 @@
 import React, { Component } from "react";
-import Categories from "../Mockdata/Categories.json";
-// import showHomepage from "../Mockdata/showHomepage.json";
 import axios from "axios";
-import Header from "../page/Header";
-import Footer from "../page/Footer";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
-export default class ThayMH_EKPage extends Component {
+export default class ThayvoPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      screens: [],
+      changeCase: [],
     };
   }
   async componentDidMount() {
     await axios
       .get(`http://127.0.0.1:8000/api/products`)
       .then((res) => {
-        this.setState(() => ({ screens: res.data }));
+        this.setState(() => ({ changeCase: res.data }));
       });
   }
   render() {
@@ -32,7 +30,7 @@ export default class ThayMH_EKPage extends Component {
                     <div></div>
                     <br></br>
                     <div className="container">
-                    {this.state.screens.map((products, index) => (
+                    {this.state.changeCase.map((products, index) => (
                         <div className="prd" key={index}>
                         <img
                             className="image-wrapper"
@@ -52,7 +50,7 @@ export default class ThayMH_EKPage extends Component {
                 
                     <br></br>
                     <div className="container">
-                    {this.state.screens.map((products, index) => (
+                    {this.state.changeCase.map((products, index) => (
                         <div className="prd" key={index}>
                         <img
                             className="image-wrapper"

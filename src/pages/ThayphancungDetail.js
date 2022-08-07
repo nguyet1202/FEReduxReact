@@ -1,25 +1,18 @@
 import React, { Component } from "react";
-import Categories from "../Mockdata/Categories.json";
-// import showHomepage from "../Mockdata/showHomepage.json";
-import axios from "axios";
-import Header from "../page/Header";
-import Footer from "../page/Footer";
 
-export default class ThayMH_EKPage extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      screens: [],
+import axios from "axios";
+import {useParams} from "react-router-dom"
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+
+export default function ThayMH_EKPage() {
+
+    const screenDetail = {
+      img: 'image',
+      product_name: 'name',
+      price: 'price',
     };
-  }
-  async componentDidMount() {
-    await axios
-      .get(`http://127.0.0.1:8000/api/products`)
-      .then((res) => {
-        this.setState(() => ({ screens: res.data }));
-      });
-  }
-  render() {
+
     return (
         <div>
             <Header></Header>
@@ -49,29 +42,9 @@ export default class ThayMH_EKPage extends Component {
                     ))}
                     </div>
                     <br></br>
-                
-                    <br></br>
-                    <div className="container">
-                    {this.state.screens.map((products, index) => (
-                        <div className="prd" key={index}>
-                        <img
-                            className="image-wrapper"
-                            style={{ width: "200px", height: "200px" }}
-                            src={products.img}
-                            alt="file"
-                        ></img>
-                        <p className="name-wrapper">{products.product_name}</p>
-
-                        <div>
-                            <span className="price-wrapper">{products.price}VND</span>
-                        </div>
-                        </div>
-                    ))}
-                    </div>
-                    <br></br>
                 </div>
             <Footer></Footer>
         </div>
     );
-  }
+  
 }
