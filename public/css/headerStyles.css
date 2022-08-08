@@ -2,6 +2,10 @@
     padding: 0;
     margin: 0;
 }
+.header{
+    background-color: #f8f8f8;
+    
+}
 .header_top{
     display: flex;
     background-color: rgb(84, 80, 80);
@@ -20,15 +24,32 @@
     color: white;
 
 }
+.h_navImage {
+    padding: 0.2rem 1rem 0.2rem 0;
+}
+.h_navImage img{
+    height: 40px;
+    width: 50px;
+}
+.link_a{
+    font-size: 20px;
+    font-weight: 400;
+    align-items: center;
+    color: rgb(11, 11, 11);
+    text-decoration: none;
+}
+.link_a:hover{
+    color: #F53838;
+}
 .topnav{
     display: flex;
     margin-bottom: 0px;
+    background-color: rgb(255, 255, 255);
 }
 .centerDiv{
     margin-top: 1%;
     display: flex;
-    justify-content: space-between;
-    width: 70%;
+    justify-content: center;
 }
 .image_logo img {
     margin-left: 50px;
@@ -63,8 +84,6 @@
 }
 
 .menu_center{
-    display: flex;
-    margin-left:130px;
     padding-top: 19px;
 }
 .menu_center a{
@@ -77,7 +96,7 @@
 
 }
 #menu_bottom{
-    background-color: rgb(241, 238, 232);
+    background-color:antiquewhite;
     padding: 0 4rem;
 }
 #menu_bottom ul{
@@ -102,10 +121,7 @@
     list-style-type: none;
     line-height: 40px;
 }
-.dichvu  a{
-    text-decoration: none;
-    color: black;
-}
+
   
 .dichvu li:hover {
     /* background-color: rgb(160, 186, 196); */
@@ -113,19 +129,17 @@
     color: #333;
 }
 
-.dichvu img{
-    height: 30px;
-    margin-top: 9px;
 
-}
 
 .dropbtn {
     background-color: none;
     color: rgb(11, 2, 2);
-    padding: 8px;
     font-size: 15px;
+    width: 6rem;
     border: none;
     cursor: pointer;
+    border-radius: 5px;
+    padding: 0.3rem 2rem;
 }
 .dropdown {
     position: relative;
@@ -150,5 +164,3 @@
 .dropdown:hover .dropdown-content {
     display: block;
 }
-  
-
