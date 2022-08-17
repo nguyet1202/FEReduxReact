@@ -3,6 +3,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import Banner from "./Banner";
 
 const ProductList = ({title, list}) => {
   return (
@@ -14,20 +15,20 @@ const ProductList = ({title, list}) => {
           var cate = "";
           switch (product.service_id) {
             case 2:
-              cate = "ThaykinhDetail";
+              cate = "ScreenReplaceDetail"; 
               break;
             case 3:
-              cate = "ThaypinDetail";
+              cate = "BatteryReplaceDetail";
               break;
             case 4:
-              cate = "ThayphancungDetail";
+              cate = "HardwareReplaceDetail";
               break;
             default:
-              cate = "ThayvoDetail";
+              cate = "CaseReplaceDetail";
           }
           return (
             <div className="prd" key={index}>
-              <Link to={`/${cate}/${index}`}>
+              <Link to={`/${cate}/${product.id}`}>
                 <img
                   className="prd-img"
                   style={{ width: "200px", height: "200px" }}
@@ -46,6 +47,7 @@ const ProductList = ({title, list}) => {
     </div>
   );
 }
+
 export default class Content extends Component {
   constructor(props) {
     super(props);
@@ -65,6 +67,7 @@ export default class Content extends Component {
     return (
       <div>
         <Header></Header>
+        <br></br>
         <br></br>
         <div className="contents">
           {this.state.services.map((service) => (

@@ -3,19 +3,20 @@ import axios from "axios";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
-export default class ThayvoPage extends Component {
+export default class ScreenReplacePage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      changeCase: [],
+      screen: [],
     };
   }
   async componentDidMount() {
     await axios
-      .get(`http://127.0.0.1:8000/api/service/1`)
+      .get(`http://127.0.0.1:8000/api/service/3`)
       .then((res) => {
-        this.setState(() => ({ changeCase: res.data }));
+        this.setState(() => ({ screen: res.data }));
       });
+      console.log('test')
   }
   render() {
     return (
@@ -25,12 +26,12 @@ export default class ThayvoPage extends Component {
                     <nav className="linking">
                         <a className="Itemlinking" href="http://localhost:3000/">Trang chủ</a>
                         <span className="divider">/</span>
-                        <a className="Itemlinking" href="#">Thay vỏ</a>
+                        <a className="Itemlinking" href="#">Thay pin</a>
                     </nav>
                     <div></div>
                     <br></br>
                     <div className="container">
-                    {this.state.changeCase.map((products, index) => (
+                    {this.state.screen.map((products, index) => (
                         <div className="prd" key={index}>
                         <img
                             className="image-wrapper"
@@ -47,10 +48,9 @@ export default class ThayvoPage extends Component {
                     ))}
                     </div>
                     <br></br>
-{/*                 
-                    <br></br>
+                    {/* <br></br>
                     <div className="container">
-                    {this.state.changeCase.map((products, index) => (
+                    {this.state.battery.map((products, index) => (
                         <div className="prd" key={index}>
                         <img
                             className="image-wrapper"

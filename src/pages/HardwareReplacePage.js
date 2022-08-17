@@ -5,19 +5,20 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 
-export default class ThaypinPage extends Component {
+export default class HardwareReplacePage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      battery: [],
+      hardweare: [],
     };
   }
   async componentDidMount() {
     await axios
       .get(`http://127.0.0.1:8000/api/service/3`)
       .then((res) => {
-        this.setState(() => ({ battery: res.data }));
+        this.setState(() => ({ hardweare: res.data }));
       });
+      console.log('test')
   }
   render() {
     return (
@@ -32,7 +33,7 @@ export default class ThaypinPage extends Component {
                     <div></div>
                     <br></br>
                     <div className="container">
-                    {this.state.battery.map((products, index) => (
+                    {this.state.hardweare.map((products, index) => (
                         <div className="prd" key={index}>
                         <img
                             className="image-wrapper"
@@ -49,26 +50,10 @@ export default class ThaypinPage extends Component {
                     ))}
                     </div>
                     <br></br>
-                    {/* <br></br>
-                    <div className="container">
-                    {this.state.battery.map((products, index) => (
-                        <div className="prd" key={index}>
-                        <img
-                            className="image-wrapper"
-                            style={{ width: "200px", height: "200px" }}
-                            src={products.img}
-                            alt="file"
-                        ></img>
-                        <p className="name-wrapper">{products.product_name}</p>
-                        <div>
-                            <span className="price-wrapper">{products.price}VND</span>
-                        </div>
-                        </div>
-                    ))}
-                    </div> */}
-                    <br></br>
                 </div>
             <Footer></Footer>
+            <br></br>
+            <br></br>
         </div>
     );
   }

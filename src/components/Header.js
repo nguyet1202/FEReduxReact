@@ -3,6 +3,7 @@ import React,{ Component} from "react";
 import { Link } from 'react-router-dom';
 
 export default class Header extends Component {
+  
     render() {
       return (
         <div className="header">
@@ -29,19 +30,19 @@ export default class Header extends Component {
                       All <i className="fa fa-caret-down" />
                     </button>
                     <div className="dropdown-content">
-                      <Link to="/ThayMH_EK" className="link_a">
+                      <Link to="/ScreenReplace" className="link_a">
                         Thay Màn Hình-Ép Kính{" "}
                       </Link>
   
-                      <Link to="/ThayPin" className="link_a">
+                      <Link to="/BatteryReplace" className="link_a">
                         Thay Pin{" "}
                       </Link>
   
-                      <Link to="/ThayVo" className="link_a">
+                      <Link to="/CaseReplace" className="link_a">
                         Thay Vỏ{" "}
                       </Link>
   
-                      <Link to="/Thayphancung" className="link_a">
+                      <Link to="/HardwareReplace" className="link_a">
                         Thay Phần Cứng{" "}
                       </Link>
                     </div>
@@ -82,7 +83,7 @@ export default class Header extends Component {
                         src="https://cdn.iconscout.com/icon/free/png-256/phone-2513365-2104689.png"
                         alt=""
                       />
-                      <Link to="/ThayMH_EK" className="link_a">
+                      <Link to="/ScreenReplace" className="link_a">
                         Thay Màn Hình-Ép Kính{" "}
                       </Link>
                     </div>
@@ -95,7 +96,7 @@ export default class Header extends Component {
                         src="https://phatlocmobile.vn/image/cache/catalog/a-iphone/thay-vo-iphone-6-lay-ngay-800x800.png"
                         alt=""
                       />
-                      <Link to="/ThayVo" className="link_a">
+                      <Link to="/CaseReplace" className="link_a">
                         Thay Vỏ{" "}
                       </Link>
                     </div>
@@ -108,7 +109,7 @@ export default class Header extends Component {
                         src="https://www.9mobile.vn/sites/default/files/2019-01/bang_gia-thay-pin.png"
                         alt=""
                       />
-                      <Link to="/ThayPin" className="link_a">
+                      <Link to="/BatteryReplace" className="link_a">
                         Thay Pin{" "}
                       </Link>
                     </div>
@@ -121,7 +122,7 @@ export default class Header extends Component {
                         src="https://phatlocmobile.vn/image/cache/catalog/a-iphone/thay-vo-iphone-6-lay-ngay-800x800.png"
                         alt=""
                       />
-                      <Link to="/ThayPhanCung" className="link_a">
+                      <Link to="/HardwareReplace" className="link_a">
                         Thay Phần Cứng{" "}
                       </Link>
                     </div>

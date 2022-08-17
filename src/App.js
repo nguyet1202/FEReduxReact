@@ -3,17 +3,18 @@ import React, { Component }  from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Content from './pages/Content';
-import ThaypinPage from './pages/ThaypinPage';
-import ThayvoPage from './pages/ThayvoPage';
-import ThayMH_EKPage from './pages/ThayMH_EKPage';
-import ThayphancungPage from './pages/ThayphancungPage';
-import ThaypinDetail from './pages/ThaypinPage';
-import ThaykinhDetail from './pages/ThaykinhDetail';
-import ThayvoDetail from './pages/ThayvoDetail';
-import ThayphancungDetail from './pages/ThayphancungDetail';
+import BatteryReplacePage from './pages/BatteryReplacePage';
+import CaseReplacePage from './pages/CaseReplacePage';
+import ScreenReplacePage from './pages/ScreenReplacePage';
+import HardwareReplacePage from './pages/HardwareReplacePage';
+import BatteryReplaceDetail from './pages/BatteryReplaceDetail';
+import ScreenReplaceDetail from './pages/ScreenReplaceDetail';
+import CaseReplaceDetail from './pages/CaseReplaceDetail';
+import HardwareReplaceDetail from './pages/HardwareReplaceDetail';
 import AboutUs from './pages/AboutUs';
 import InforForm from './pages/InforForm';
 import Search from './pages/Search';
+import Banner from './pages/Banner';
 
 
 function App() {
@@ -21,17 +22,19 @@ function App() {
         <Routes>
 
             <Route path="/" element={<Content/>} />
-            <Route path="/ThayPin" element={<ThaypinPage/>} />
-            <Route path="/ThayVo" element={<ThayvoPage />} />
-            <Route path="/ThayMH_EK" element={<ThayMH_EKPage />} />
-            <Route path="/ThayPhanCung" element={<ThayphancungPage/>} />
-            <Route path="/ThayPinDetail/:id" element={<ThaypinDetail/>} />
-            <Route path="/ThayvoDetail" element={<ThayvoDetail/>} />
-            <Route path="/ThaykinhDetail" element={<ThaykinhDetail/>} />
-            <Route path="/Thayphancung" element={<ThayphancungDetail/>} />
+            <Route path="/BatteryReplace" element={<BatteryReplacePage/>} />
+            <Route path="/CaseReplace" element={<CaseReplacePage />} />
+            <Route path="/ScreenReplace" element={<ScreenReplacePage />} />
+            <Route path="/HardwareReplace" element={<HardwareReplacePage/>} />
+            <Route path="/BatteryReplaceDetail/:id" element={<BatteryReplaceDetail/>} />
+            <Route path="/CaseReplaceDetail/:id" element={<CaseReplaceDetail/>} />
+            <Route path="/ScreenReplaceDetail/:id" element={<ScreenReplaceDetail/>} />
+            <Route path="/HardwareReplaceDetail/:id" element={<HardwareReplaceDetail/>} />
             <Route path="/AboutUs" element={<AboutUs/>}/>
             <Route path="/InforForm" element={<InforForm/>} />
             <Route path="/Search" element={<Search/>} />
+            <Route path="/Banner" element={<Banner/>} />
+
 
         </Routes>
     );
