@@ -12,7 +12,7 @@ export default class ScreenReplacePage extends Component {
   }
   async componentDidMount() {
     await axios
-      .get(`http://127.0.0.1:8000/api/service/3`)
+      .get(`http://127.0.0.1:8000/api/service/2`)
       .then((res) => {
         this.setState(() => ({ screen: res.data }));
       });

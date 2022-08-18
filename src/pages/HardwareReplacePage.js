@@ -9,14 +9,14 @@ export default class HardwareReplacePage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      hardweare: [],
+      hardware: [],
     };
   }
   async componentDidMount() {
     await axios
-      .get(`http://127.0.0.1:8000/api/service/3`)
+      .get(`http://127.0.0.1:8000/api/service/1`)
       .then((res) => {
-        this.setState(() => ({ hardweare: res.data }));
+        this.setState({ hardware: res.data });
       });
       console.log('test')
   }
@@ -33,7 +33,7 @@ export default class HardwareReplacePage extends Component {
                     <div></div>
                     <br></br>
                     <div className="container">
-                    {this.state.hardweare.map((products, index) => (
+                    {this.state.hardware.map((products, index) => (
                         <div className="prd" key={index}>
                         <img
                             className="image-wrapper"
