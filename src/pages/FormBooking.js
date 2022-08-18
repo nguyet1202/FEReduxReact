@@ -1,6 +1,7 @@
-import { useState } from "react";
+import React from "react"; 
+import{ useState } from "react";
 import axios from "axios";
-import "../assets/css/formBooking.css";
+import "../assets/css/FormBooking.css";
 
 const BookingSerive = () => {
   const [phone_name, setPhoneName] = useState("");
@@ -106,7 +107,7 @@ const BookingSerive = () => {
             <div className="form__info__customer">
               <div className="customer__label">
                 <label htmlFor="repair_day">Ngày nhận máy:</label>
-                <label htmlFor="received_day">Ngày hẹn trả Khách:</label>
+                <label htmlFor="received_day">Ngày hẹn trả khách:</label>
                 <label htmlFor="cus_name">Tên khách hàng:</label>
                 <label htmlFor="cusphone_number ">Số điện thoại:</label>
               </div>

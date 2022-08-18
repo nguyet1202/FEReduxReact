@@ -67,7 +67,7 @@ export default class Content extends Component {
     return (
       <div>
         <Header></Header>
-        {/* <Banner></Banner> */}
+  
         <div className="contents">
           {this.state.services.map((service) => (
             <ProductList title={service.service_name} list={this.state.products.filter(product => product.service_id === service.id)} />

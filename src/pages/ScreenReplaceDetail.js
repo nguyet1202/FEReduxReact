@@ -130,7 +130,7 @@ class ScreenReplaceDetail extends Component {
               <br></br>
   
               <div className="detail_contact">
-                <a href="InforForm" className="detail_contact_a">
+                <a href="#" className="detail_contact_a">
                   {" "}
                   Liên hệ trực tiếp
                 </a>

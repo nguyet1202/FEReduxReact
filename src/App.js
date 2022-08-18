@@ -16,6 +16,7 @@ import InforForm from './pages/InforForm';
 import Search from './pages/Search';
 import Banner from './components/Banner';
 import Slide from './components/Slide';
+import FormBooking from './pages/FormBooking';
 
 function App() {
     return (
@@ -35,9 +36,7 @@ function App() {
             <Route path="/InforForm" element={<InforForm/>} />
             <Route path="/Search" element={<Search/>} />
             <Route path="/Banner" element={<Banner/>} />
-            {/* <Route path="/FormBooking" element={<FormBooking/>} /> */}
-
-
+            <Route path="/FormBooking" element={<FormBooking/>} />
         </Routes>
     );
 }
