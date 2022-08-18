@@ -48,24 +48,6 @@ export default class ScreenReplacePage extends Component {
                     ))}
                     </div>
                     <br></br>
-                    {/* <br></br>
-                    <div className="container">
-                    {this.state.battery.map((products, index) => (
-                        <div className="prd" key={index}>
-                        <img
-                            className="image-wrapper"
-                            style={{ width: "200px", height: "200px" }}
-                            src={products.img}
-                            alt="file"
-                        ></img>
-                        <p className="name-wrapper">{products.product_name}</p>
-                        <div>
-                            <span className="price-wrapper">{products.price}VND</span>
-                        </div>
-                        </div>
-                    ))}
-                    </div> */}
-                    <br></br>
                 </div>
             <Footer></Footer>
         </div>

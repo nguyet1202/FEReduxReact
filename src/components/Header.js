@@ -1,6 +1,7 @@
 import React,{ Component} from "react";
 
 import { Link } from 'react-router-dom';
+import Slide from "./Slide";
 
 export default class Header extends Component {
   
@@ -131,6 +132,7 @@ export default class Header extends Component {
               </div>
             </ul>
           </div>
+          <Slide/>
         </div>
       );
     }

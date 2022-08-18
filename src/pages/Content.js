@@ -3,7 +3,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import Banner from "./Banner";
+// import Banner from "../components/Banner";
 
 const ProductList = ({title, list}) => {
   return (
@@ -67,8 +67,7 @@ export default class Content extends Component {
     return (
       <div>
         <Header></Header>
-        <br></br>
-        <br></br>
+        {/* <Banner></Banner> */}
         <div className="contents">
           {this.state.services.map((service) => (
             <ProductList title={service.service_name} list={this.state.products.filter(product => product.service_id === service.id)} />

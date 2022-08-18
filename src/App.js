@@ -14,14 +14,15 @@ import HardwareReplaceDetail from './pages/HardwareReplaceDetail';
 import AboutUs from './pages/AboutUs';
 import InforForm from './pages/InforForm';
 import Search from './pages/Search';
-import Banner from './pages/Banner';
-
+import Banner from './components/Banner';
+import Slide from './components/Slide';
 
 function App() {
     return (
         <Routes>
 
             <Route path="/" element={<Content/>} />
+            <Route path="/Slide" element={<Slide/>} />
             <Route path="/BatteryReplace" element={<BatteryReplacePage/>} />
             <Route path="/CaseReplace" element={<CaseReplacePage />} />
             <Route path="/ScreenReplace" element={<ScreenReplacePage />} />
@@ -34,6 +35,7 @@ function App() {
             <Route path="/InforForm" element={<InforForm/>} />
             <Route path="/Search" element={<Search/>} />
             <Route path="/Banner" element={<Banner/>} />
+            {/* <Route path="/FormBooking" element={<FormBooking/>} /> */}
 
 
         </Routes>
