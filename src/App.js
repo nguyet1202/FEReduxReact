@@ -19,11 +19,13 @@ import Slide from './components/Slide';
 import MainReplacePage from './pages/MainReplacePage'
 import FormBooking from './pages/FormBooking';
 import Banner from './components/Banner';
+import Call from './components/Call';
 function App() {
     return (
       <Routes>
         <Route path="/" element={<Content />} />
         <Route path="/Slide" element={<Slide />} />
+        <Route path="/Call" element={<Call />} />
         <Route path="/Banner" element={<Banner />} />
         <Route path="/BatteryReplace" element={<BatteryReplacePage />} />
         <Route path="/CaseReplace" element={<CaseReplacePage />} />

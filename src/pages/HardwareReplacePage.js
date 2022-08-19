@@ -14,7 +14,7 @@ export default class HardwareReplacePage extends Component {
   }
   async componentDidMount() {
     await axios
-      .get(`http://127.0.0.1:8000/api/service/1`)
+      .get(`http://127.0.0.1:8000/api/service/4`)
       .then((res) => {
         this.setState({ hardware: res.data });
       });

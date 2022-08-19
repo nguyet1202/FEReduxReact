@@ -2,6 +2,7 @@ a:hover {
     text-decoration: none !important;
 }
 .contents{
+    z-index: 1;
     max-width:1024px ;
     margin: auto;
     background-color: #f8f8f8f8;

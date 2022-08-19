@@ -13,7 +13,7 @@ export default class CaseReplacePage extends Component {
   }
   async componentDidMount() {
     await axios
-      .get(`http://127.0.0.1:8000/api/service/3`)
+      .get(`http://127.0.0.1:8000/api/service/1`)
       .then((res) => {
         this.setState(() => ({ case: res.data }));
       });
