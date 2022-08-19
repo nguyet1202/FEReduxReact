@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Call from "../components/Call";
-
-
-const ProductList = ({title, list}) => {
+import Banner from "../components/Banner";
+import Slide from "../components/Slide";
+const ProductList = ({ title, list }) => {
   return (
     <div className="product-list">
       <h2 className="title-content">{title}</h2>
@@ -16,7 +16,7 @@ const ProductList = ({title, list}) => {
           var cate = "";
           switch (product.service_id) {
             case 2:
-              cate = "ScreenReplaceDetail"; 
+              cate = "ScreenReplaceDetail";
               break;
             case 3:
               cate = "BatteryReplaceDetail";
@@ -47,35 +47,42 @@ const ProductList = ({title, list}) => {
       </div>
     </div>
   );
-}
+};
 
 export default class Content extends Component {
   constructor(props) {
     super(props);
     this.state = {
       products: [],
-      services: []
+      services: [],
     };
   }
   async componentDidMount() {
-    const services = (await axios.get("http://127.0.0.1:8000/api/services")).data;
-    const products = (await axios.get(`http://127.0.0.1:8000/api/products`)).data;
+    const services = (await axios.get("http://127.0.0.1:8000/api/services"))
+      .data;
+    const products = (await axios.get(`http://127.0.0.1:8000/api/products`))
+      .data;
 
-    this.setState({services, products})
+    this.setState({ services, products });
   }
   render() {
     console.log(this.state);
     return (
       <div>
-        <Header></Header>
-        <Call></Call>
+      {/* <Slide></Slide>
+      <Banner></Banner> */}
         <div className="contents">
           {this.state.services.map((service) => (
-            <ProductList title={service.service_name} list={this.state.products.filter(product => product.service_id === service.id)} />
+            <ProductList
+              title={service.service_name}
+              list={this.state.products.filter(
+                (product) => product.service_id === service.id
+              )}
+            />
           ))}
         </div>
-        <Footer></Footer>
+     
       </div>
     );
   }
-} 
+}

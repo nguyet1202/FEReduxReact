@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
-import Slide from "../components/Slide";
+
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { useParams } from "react-router-dom";
@@ -26,7 +26,7 @@ class BatteryReplaceDetail extends Component {
   render() {
     return (
       <div>
-        <Header />
+        {/* <Header></Header> */}
         <br></br>
 
         <div className="ScreenDetail">
@@ -54,24 +54,30 @@ class BatteryReplaceDetail extends Component {
             {this.state.isLoad ? (
               <div className="productDetail">
                 <div className="proDetail">
-                  <img
-                    className="image-wrapper"
-                    style={{ width: "200px", height: "200px" }}
-                    src={this.state.prodetail.img}
-                    alt="file"
-                  ></img>
-                  <p className="name-wrapper">
-                    {this.state.prodetail.product_name}
-                  </p>
-
-                  <div>
-                    <span className="price-wrapper">
-                      {this.state.prodetail.price}VND
-                    </span>
+                  <div className="flex-center">
+                    <img
+                      className="image-wrapper image-wrapper--detail"
+                      // style={{ width: "200px", height: "200px" }}
+                      src={this.state.prodetail.img}
+                      alt="file"
+                    ></img>
                   </div>
-                  <p className="des-wrapper">
-                    {this.state.prodetail.description}
-                  </p>
+                  <div className="info">
+                    <p className="name-wrapper--detail">
+                      {this.state.prodetail.product_name}
+                    </p>
+
+                    <div>
+                      <span className="price-wrapper">
+                        {this.state.prodetail.price} VND
+                      </span>
+                    </div>
+                    <div className="flex-center">
+                      <p className="des-wrapper">
+                        {this.state.prodetail.description}
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             ) : (
@@ -80,7 +86,7 @@ class BatteryReplaceDetail extends Component {
 
             <hr></hr>
             <div className="note">
-              <p>
+              <p className="note__title">
                 <b>
                   Giá bao gồm công thay và bảo hành, phát sinh thêm chi phí nào
                   khác
@@ -130,7 +136,7 @@ class BatteryReplaceDetail extends Component {
             <br></br>
 
             <div className="detail_contact">
-              <a href="InforForm" className="detail_contact_a">
+              <a href="/FormBooking" className="detail_contact_a">
                 {" "}
                 Liên hệ trực tiếp
               </a>
@@ -139,9 +145,11 @@ class BatteryReplaceDetail extends Component {
         </div>
         <br></br>
         <br></br>
-        <Footer></Footer>
+        {/* <Footer></Footer> */}
       </div>
     );
   }
 }
-export default (props) => <BatteryReplaceDetail {...props} params={useParams()} />;
+export default (props) => (
+  <BatteryReplaceDetail {...props} params={useParams()} />
+);

@@ -43,32 +43,18 @@ const BookingSerive = () => {
       <div className="container-fluid">
         <form onSubmit={handleSubmit}>
           <span className="tile_booking">THÔNG TIN SỬA CHỮA</span>
-          <div className="flex_contain">
-            <div className="form-row">
-              <div className="form-group">
-                <label htmlFor="phone_name">Nhập tên thiết bị: </label>
-                <input
-                  type="text"
-                  className="form-control"
-                  id="phoneName"
-                  name="phone_name"
-                  value={phone_name}
-                  onChange={(e) => setPhoneName(e.target.value)}
-                />
-              </div>
-              <div className="form-group">
-                <label htmlFor="type_device">Tên thể loại cần sửa chữa: </label>
-                <input
-                  type="text"
-                  className="form-control"
-                  id="typeDevice"
-                  name="type_device"
-                  value={type_device}
-                  onChange={(e) => setTypeDevice(e.target.value)}
-                />
-              </div>
-            </div>
+          <div className="form-group">
+            <label className="phone_name" htmlFor="phone_name">Nhập tên thiết bị: </label>
+            <input
+              type="text"
+              className="form-control"
+              id="phoneName"
+              name="phone_name"
+              value={phone_name}
+              onChange={(e) => setPhoneName(e.target.value)}
+            />
           </div>
+          <div className="flex_contain"></div>
           <div className="form__info-phone">
             <div className="form__info__service">
               <div className="service__label">

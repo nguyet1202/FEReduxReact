@@ -4,7 +4,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { useParams } from "react-router-dom";
 
-class ScreenReplaceDetail extends Component {
+class MainReplaceDetail extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -25,7 +25,7 @@ class ScreenReplaceDetail extends Component {
   render() {
     return (
       <div>
-      
+        {/* <Header></Header> */}
         <br></br>
 
         <div className="ScreenDetail">
@@ -144,11 +144,11 @@ class ScreenReplaceDetail extends Component {
         </div>
         <br></br>
         <br></br>
-      
+        {/* <Footer></Footer> */}
       </div>
     );
   }
 }
 export default (props) => (
-  <ScreenReplaceDetail {...props} params={useParams()} />
+  <MainReplaceDetail {...props} params={useParams()} />
 );
