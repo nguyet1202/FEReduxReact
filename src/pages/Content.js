@@ -3,7 +3,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-// import Banner from "../components/Banner";
+
 
 const ProductList = ({title, list}) => {
   return (
@@ -77,4 +77,4 @@ export default class Content extends Component {
       </div>
     );
   }
-}
+} 

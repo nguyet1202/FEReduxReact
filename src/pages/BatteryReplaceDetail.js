@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
-
+import Slide from "../components/Slide";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { useParams } from "react-router-dom";
@@ -26,7 +26,7 @@ class BatteryReplaceDetail extends Component {
   render() {
     return (
       <div>
-        <Header></Header>
+        <Header />
         <br></br>
 
         <div className="ScreenDetail">
@@ -138,7 +138,7 @@ class BatteryReplaceDetail extends Component {
           </div>
         </div>
         <br></br>
-          <br></br>
+        <br></br>
         <Footer></Footer>
       </div>
     );

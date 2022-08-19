@@ -1,78 +1,102 @@
-*{
+* {
     padding: 0;
     margin: 0;
 }
-.header{
+
+.header {
     background-color: #f8f8f8;
-    
+
 }
-.header_top{
+
+.header_top {
     display: flex;
     background-color: rgb(84, 80, 80);
     padding: 0 4rem;
     justify-content: space-between;
 }
-.header_top_left{
+
+.header_top_left {
     margin-top: 9px;
-    
+
     color: white;
-    
+
 }
-.header_top_right{
+
+.header_top_right {
     margin-top: 9px;
     /* padding-left: 55%; */
     color: white;
 
 }
-.h_navImage {
-    padding: 0.2rem 1rem 0.2rem 0;
+
+.h_navItem {
+    padding: auto 3px auto 3px;
 }
-.h_navImage img{
-    height: 40px;
-    width: 50px;
-}
-.link_a{
+
+
+
+.link_a {
+    padding: 6px 3px 13.5px 3px;
+
     font-size: 20px;
-    font-weight: 400;
+    font-weight: 500;
     align-items: center;
     color: rgb(11, 11, 11);
     text-decoration: none;
+    animation: shiny-btn1 3s ease-in-out infinite;
 }
-.link_a:hover{
-    color: #F53838;
+
+.link_a::before,
+.link_a::after {
+    background: rgb(47, 58, 68);
+    transition: all 0.3s ease;
 }
-.topnav{
+
+.link_a:hover {
+    color: #ffffff;
+    background-color: rgba(56, 56, 56, 0.55);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    opacity: .7;
+}
+
+.topnav {
     display: flex;
     margin-bottom: 0px;
     background-color: rgb(255, 255, 255);
 }
-.centerDiv{
+
+.centerDiv {
     margin-top: 1%;
     display: flex;
     justify-content: center;
 }
+
 .image_logo img {
     margin-left: 50px;
     margin-bottom: 0px;
     width: 70px;
 
 }
-.all{
+
+.all {
     padding-left: 100px;
     display: flex;
 }
-#h_inputSearch {
 
+#h_inputSearch {
+    height: 30px;
     border: none;
     outline: none;
     font-size: 20px;
     padding-left: 20px;
-    width: 800px;
+    width: 955px;
 }
-.search button{
+
+.search button {
     border: none;
-    background:none;
+    background: none;
 }
+
 .search form {
     display: flex;
     border: solid #d5cdd0 1px;
@@ -83,55 +107,61 @@
 
 }
 
-.menu_center{
+.menu_center {
     padding-top: 19px;
 }
-.menu_center a{
+
+.menu_center a {
     text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
 
 }
-.menu_center a:hover{
+
+.menu_center a:hover {
     text-decoration: none;
     color: blue;
 
 }
-#menu_bottom{
-    background-color:antiquewhite;
+
+#menu_bottom {
+    background-color: #D9D9D9;
     padding: 0 4rem;
 }
-#menu_bottom ul{
+
+#menu_bottom ul {
     padding: 0;
     margin: 0;
     display: flex;
 }
-.dichvu{
+
+.dichvu {
     padding: 0 2rem;
     display: flex;
-    gap: 2rem;
+    gap: 4rem;
 }
-.suachua li{
+
+.suachua li {
     margin-top: 5px;
     list-style-type: none;
 }
 
-.h_navImage {
-    display: flex;
-}
-.dichvu li{
+
+
+.dichvu li {
     list-style-type: none;
     line-height: 40px;
 }
 
-  
-.dichvu li:hover {
-    /* background-color: rgb(160, 186, 196); */
-    background: #d7d5d5;
-    color: #333;
+
+
+
+.form-search {
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
 }
 
-
-
-.dropbtn {
+.drop-btn {
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
     background-color: none;
     color: rgb(11, 2, 2);
     font-size: 15px;
@@ -139,28 +169,36 @@
     border: none;
     cursor: pointer;
     border-radius: 5px;
-    padding: 0.3rem 2rem;
+    padding: 0.3rem 2rem 0.6rem 2rem;
+    font-weight: 500;
 }
+
 .dropdown {
     position: relative;
     display: inline-block;
 
 }
+
 .dropdown-content {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
+
 .dropdown-content a {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
 }
-.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1
+}
+
 .dropdown:hover .dropdown-content {
     display: block;
 }

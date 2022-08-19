@@ -12,13 +12,10 @@ export default function Slide() {
       <input type="radio" name="slider" id="l02" />
       <input type="radio" name="slider" id="l03" />
 
-      <div className="wrap-left">
-        <img src="./image/banner22.jpg" alt="" />
-      </div>
-
       <div id="wrap">
         <ul id="slider">
           <img src="./image/thumbnail-removebg-preview.png" alt="" />
+          <img src="./image/image_46-removebg-preview.png" alt="" />
           <img
             src="./image/thay-vo-samsung-galaxy-note-10-plus-removebg-preview.png"
             alt=""
@@ -41,10 +38,21 @@ export default function Slide() {
             alt=""
           />
           <img src="./image/lcd-xs-300x300-removebg-preview.png" alt="" />
+
+          <img src="./image/O-cung-Macbook-removebg-preview.png" alt="" />
+          <img
+            src="./image/sua-iphone-bi-soc-man-hinh-1-removebg-preview.png"
+            alt=""
+          />
+          <img src="./image/hinh-nen-man-hinh-hong.jpg" alt="" />
           <img src="./image/pin-XS-Max-removebg-preview.png" alt="" />
         </ul>
       </div>
- 
+      {/* <div id="opts">
+        <label for="l01">1</label>
+        <label for="l02">2</label>
+        <label for="l03">3</label>
+    </div> */}
     </div>
   );
 }
