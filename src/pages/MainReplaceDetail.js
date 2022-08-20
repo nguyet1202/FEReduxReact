@@ -142,9 +142,7 @@ class MainReplaceDetail extends Component {
             </div>
           </div>
         </div>
-        <br></br>
-        <br></br>
-        {/* <Footer></Footer> */}
+    
       </div>
     );
   }

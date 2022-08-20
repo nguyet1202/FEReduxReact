@@ -19,7 +19,7 @@ export default class CaseReplacePage extends Component {
   render() {
     return (
       <div>
-        <Header></Header>
+       
         <div className="Content">
           <nav className="linking">
             <a className="Itemlinking" href="http://localhost:3000/">
@@ -51,7 +51,7 @@ export default class CaseReplacePage extends Component {
           </div>
           <br></br>
         </div>
-        <Footer></Footer>
+      
       </div>
     );
   }

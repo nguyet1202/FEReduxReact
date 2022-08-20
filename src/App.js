@@ -64,7 +64,10 @@ function App() {
         <Route path="/Banner" element={<Banner />} />
         <Route path="/FormBooking" element={<FormBooking />} />
         <Route path="/Call" element={<Call />} />
+        
+
       </Routes>
+ 
       <Footer />
     </>
   );

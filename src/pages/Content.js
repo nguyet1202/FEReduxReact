@@ -6,6 +6,7 @@ import Footer from "../components/Footer";
 import Call from "../components/Call";
 import Banner from "../components/Banner";
 import Slide from "../components/Slide";
+
 const ProductList = ({ title, list }) => {
   return (
     <div className="product-list">
@@ -38,7 +39,7 @@ const ProductList = ({ title, list }) => {
                 ></img>
                 <p className="prd-name">{product.product_name}</p>
                 <div>
-                  <span className="prd-price">{product.price} VND</span>
+                  <span className="prd-price">{product.price} $</span>
                 </div>
               </Link>
             </div>
@@ -69,8 +70,8 @@ export default class Content extends Component {
     console.log(this.state);
     return (
       <div>
-      {/* <Slide></Slide>
-      <Banner></Banner> */}
+<Call>
+</Call>
         <div className="contents">
           {this.state.services.map((service) => (
             <ProductList
@@ -81,7 +82,7 @@ export default class Content extends Component {
             />
           ))}
         </div>
-     
+
       </div>
     );
   }

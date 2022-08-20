@@ -34,17 +34,14 @@ class ScreenReplaceDetail extends Component {
               <a className="Itemlinking" href="http://localhost:3000/">
                 Trang chủ
               </a>
-              <span className="divider">/</span>
-              <a className="Itemlinking" href="#">
-                Sửa điện thoại SamSung
-              </a>
+             
               <span className="divider">/</span>
               <a href="#" className="linItemlinkingking">
                 Thay pin
               </a>
               <span className="divider">/</span>
               <a href="#" className="Itemlinking">
-                Chi tiết thay pin
+                Chi tiết thay màn hình - ép kính
               </a>
             </nav>
             <br></br>
@@ -142,8 +139,6 @@ class ScreenReplaceDetail extends Component {
             </div>
           </div>
         </div>
-        <br></br>
-        <br></br>
       
       </div>
     );

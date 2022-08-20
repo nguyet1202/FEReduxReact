@@ -69,7 +69,8 @@ export default class Header extends Component {
               </div>
             </div>
             <div className="menu_center">
-              <a href="AboutUs">Giới thiệu</a> | <a href="QaA">Hỏi Đáp</a>
+              <a href="AboutUs">Giới thiệu</a>
+               {/* | <a href="QaA">Tin tức</a> */}
             </div>
           </div>
         </div>

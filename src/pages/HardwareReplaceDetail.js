@@ -25,8 +25,7 @@ class HardwareReplaceDetail extends Component {
   render() {
     return (
       <div>
-        {/* <Header></Header> */}
-        <br></br>
+  
 
         <div className="ScreenDetail">
           <div className="ScreenDetail_item">
@@ -34,17 +33,14 @@ class HardwareReplaceDetail extends Component {
               <a className="Itemlinking" href="http://localhost:3000/">
                 Trang chủ
               </a>
-              <span className="divider">/</span>
-              <a className="Itemlinking" href="#">
-                Sửa điện thoại SamSung
-              </a>
+             
               <span className="divider">/</span>
               <a href="#" className="linItemlinkingking">
                 Thay pin
               </a>
               <span className="divider">/</span>
               <a href="#" className="Itemlinking">
-                Chi tiết thay pin
+                Chi tiết thay phần cứng
               </a>
             </nav>
             <br></br>

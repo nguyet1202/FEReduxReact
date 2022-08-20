@@ -6,7 +6,7 @@ export default class AboutUs extends Component {
     render() {
         return (
             <div>
-                <Header></Header>
+        
                 <br></br>
                  <div className="AboutUs">
 
@@ -48,7 +48,7 @@ export default class AboutUs extends Component {
             </div>
             <br></br>
             <br></br>
-            <Footer></Footer>
+        
             </div>
            
         );

@@ -19,7 +19,7 @@ export default class CaseReplacePage extends Component {
   render() {
     return (
       <div>
-        {/* <Header></Header> */}
+       
         <div className="Content">
           <nav className="linking">
             <a className="Itemlinking" href="http://localhost:3000/">
@@ -27,7 +27,7 @@ export default class CaseReplacePage extends Component {
             </a>
             <span className="divider">/</span>
             <a className="Itemlinking" href="#">
-              Thay pin
+              Thay vỏ
             </a>
           </nav>
           <div></div>
@@ -43,7 +43,6 @@ export default class CaseReplacePage extends Component {
                     alt="file"
                   ></img>
                   <p className="name-wrapper">{products.product_name}</p>
-
                   <div>
                     <span className="price-wrapper">{products.price}VND</span>
                   </div>

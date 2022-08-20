@@ -4,6 +4,7 @@ import axios from "axios";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
+
 export default class HardwareReplacePage extends Component {
   constructor(props) {
     super(props);
@@ -28,7 +29,7 @@ export default class HardwareReplacePage extends Component {
             </a>
             <span className="divider">/</span>
             <a className="Itemlinking" href="#">
-              Thay pin
+              Thay phần cứng
             </a>
           </nav>
           <div></div>

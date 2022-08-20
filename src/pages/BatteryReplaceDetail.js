@@ -26,18 +26,11 @@ class BatteryReplaceDetail extends Component {
   render() {
     return (
       <div>
-        {/* <Header></Header> */}
-        <br></br>
-
         <div className="ScreenDetail">
           <div className="ScreenDetail_item">
             <nav className="linking">
               <a className="Itemlinking" href="http://localhost:3000/">
                 Trang chủ
-              </a>
-              <span className="divider">/</span>
-              <a className="Itemlinking" href="#">
-                Sửa điện thoại SamSung
               </a>
               <span className="divider">/</span>
               <a href="#" className="linItemlinkingking">
@@ -143,9 +136,7 @@ class BatteryReplaceDetail extends Component {
             </div>
           </div>
         </div>
-        <br></br>
-        <br></br>
-        {/* <Footer></Footer> */}
+     
       </div>
     );
   }
