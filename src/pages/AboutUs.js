@@ -1,17 +1,13 @@
 import React,{ Component} from "react";
-
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 export default class AboutUs extends Component {
     render() {
         return (
-            <div>
-        
+            <div>        
                 <br></br>
                  <div className="AboutUs">
-
                     <br></br>
-          
                     <br></br>
                 <div className="aboutUs">
                     <p className="title_large">Về chúng tôi</p>
@@ -26,8 +22,7 @@ export default class AboutUs extends Component {
                             sửa chữa điện thoại.
                         </p>
                         <p><img className="image1" src="image/anh.png.webp"></img></p>
-      
-                   
+                       
                 </div>
                 <div className="vision">
                     <p className="title_large">Tầm nhìn</p>
@@ -47,8 +42,6 @@ export default class AboutUs extends Component {
                 </div>                  
             </div>
             <br></br>
-            <br></br>
-        
             </div>
            
         );

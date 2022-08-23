@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-
 import axios from "axios";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -21,7 +20,6 @@ export default class HardwareReplacePage extends Component {
   render() {
     return (
       <div>
-        {/* <Header></Header> */}
         <div className="Content">
           <nav className="linking">
             <a className="Itemlinking" href="http://localhost:3000/">
@@ -40,7 +38,6 @@ export default class HardwareReplacePage extends Component {
                 <div className="prd" key={index}>
                   <img
                     className="image-wrapper"
-                    // style={{ width: "200px", height: "200px" }}
                     src={products.img}
                     alt="file"
                   ></img>
@@ -55,9 +52,6 @@ export default class HardwareReplacePage extends Component {
           </div>
           <br></br>
         </div>
-        {/* <Footer></Footer> */}
-        <br></br>
-        <br></br>
       </div>
     );
   }

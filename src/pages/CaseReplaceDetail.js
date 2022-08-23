@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import axios from "axios";
-
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { useParams } from "react-router-dom";
@@ -22,7 +21,6 @@ class CaseReplaceDetail extends Component {
         this.setState(() => ({ prodetail: res.data, isLoad: true }));
       });
   }
-
   render() {
     return (
       <div>
@@ -32,8 +30,7 @@ class CaseReplaceDetail extends Component {
             <nav className="linking">
               <a className="Itemlinking" href="http://localhost:3000/">
                 Trang chủ
-              </a>
-         
+              </a>        
               <span className="divider">/</span>
               <a href="#" className="linItemlinkingking">
                 Thay pin
@@ -45,14 +42,12 @@ class CaseReplaceDetail extends Component {
             </nav>
             <br></br>
             <div></div>
-
             {this.state.isLoad ? (
               <div className="productDetail">
                 <div className="proDetail">
                   <div className="flex-center">
                     <img
                       className="image-wrapper image-wrapper--detail"
-                      // style={{ width: "200px", height: "200px" }}
                       src={this.state.prodetail.img}
                       alt="file"
                     ></img>
@@ -138,7 +133,6 @@ class CaseReplaceDetail extends Component {
             </div>
           </div>
         </div>
-        {/* <Footer></Footer> */}
       </div>
     );
   }

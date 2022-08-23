@@ -37,7 +37,6 @@ export default class ScreenReplacePage extends Component {
                 <div className="prd" key={index}>
                   <img
                     className="image-wrapper"
-                    // style={{ width: "200px", height: "200px" }}
                     src={products.img}
                     alt="file"
                   ></img>

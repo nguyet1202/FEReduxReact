@@ -22,7 +22,7 @@ export default class Footer extends Component {
                 <div className="logo">
                   <a
                     class="link"
-                    href="https://www.youtube.com/watch?v=elwqvNykS94&ab_channel=T%C4%90Gaming"
+                    href="#"
                   >
                     <p>
                       <img className="footer-icon" src="image/facebook.PNG" />
@@ -31,7 +31,7 @@ export default class Footer extends Component {
                   </a>
                   <a
                     class="link"
-                    href="https://www.youtube.com/watch?v=elwqvNykS94&ab_channel=T%C4%90Gaming"
+                    href="#"
                   >
                     <p>
                       <img className="footer-icon" src="image/youtobe.PNG" />
@@ -40,7 +40,7 @@ export default class Footer extends Component {
                   </a>
                   <a
                     class="link"
-                    href="https://www.youtube.com/watch?v=elwqvNykS94&ab_channel=T%C4%90Gaming"
+                    href="#"
                   >
                     <p>
                       <img className="footer-icon" src="image/logo.PNG" />

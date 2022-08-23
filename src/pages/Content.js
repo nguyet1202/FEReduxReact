@@ -39,7 +39,7 @@ const ProductList = ({ title, list }) => {
                 ></img>
                 <p className="prd-name">{product.product_name}</p>
                 <div>
-                  <span className="prd-price">{product.price} $</span>
+                  <span className="prd-price">{product.price} VND</span>
                 </div>
               </Link>
             </div>

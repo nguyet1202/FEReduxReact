@@ -26,8 +26,7 @@ function QuestionAnswer() {
           </div>
         ))}
       </div>
-    </>
-    
+    </>    
   );
 }
 export default QuestionAnswer;

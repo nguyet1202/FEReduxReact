@@ -48,11 +48,6 @@ export default function Slide() {
           <img src="./image/pin-XS-Max-removebg-preview.png" alt="" />
         </ul>
       </div>
-      {/* <div id="opts">
-        <label for="l01">1</label>
-        <label for="l02">2</label>
-        <label for="l03">3</label>
-    </div> */}
     </div>
   );
 }

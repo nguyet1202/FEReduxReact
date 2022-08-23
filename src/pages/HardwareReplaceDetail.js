@@ -25,15 +25,12 @@ class HardwareReplaceDetail extends Component {
   render() {
     return (
       <div>
-  
-
         <div className="ScreenDetail">
           <div className="ScreenDetail_item">
             <nav className="linking">
               <a className="Itemlinking" href="http://localhost:3000/">
                 Trang chủ
-              </a>
-             
+              </a>             
               <span className="divider">/</span>
               <a href="#" className="linItemlinkingking">
                 Thay pin
@@ -45,14 +42,12 @@ class HardwareReplaceDetail extends Component {
             </nav>
             <br></br>
             <div></div>
-
             {this.state.isLoad ? (
               <div className="productDetail">
                 <div className="proDetail">
                   <div className="flex-center">
                     <img
                       className="image-wrapper image-wrapper--detail"
-                      // style={{ width: "200px", height: "200px" }}
                       src={this.state.prodetail.img}
                       alt="file"
                     ></img>
@@ -138,9 +133,6 @@ class HardwareReplaceDetail extends Component {
             </div>
           </div>
         </div>
-        <br></br>
-        <br></br>
-        {/* <Footer></Footer> */}
       </div>
     );
   }

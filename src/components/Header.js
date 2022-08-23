@@ -52,25 +52,12 @@ export default class Header extends Component {
                       Thay Main{" "}
                     </Link>
                   </div>
-                </div>
-                <div className="search">
-                  <form className="form-search">
-                    <input
-                      id="h_inputSearch"
-                      type="text"
-                      placeholder="Tìm kiếm.."
-                      name="search"
-                    />
-                    <button type="submit">
-                      <i className="fa fa-search" />
-                    </button>
-                  </form>
-                </div>
+                </div>               
               </div>
             </div>
             <div className="menu_center">
-              <a href="AboutUs">Giới thiệu</a>
-               {/* | <a href="QaA">Tin tức</a> */}
+              <a href="AboutUs">Giới thiệu</a> 
+               | <a href="QaA">Tin tức</a>
             </div>
           </div>
         </div>

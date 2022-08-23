@@ -56,7 +56,6 @@ class MainReplaceDetail extends Component {
                   <div className="flex-center">
                     <img
                       className="image-wrapper image-wrapper--detail"
-                      // style={{ width: "200px", height: "200px" }}
                       src={this.state.prodetail.img}
                       alt="file"
                     ></img>

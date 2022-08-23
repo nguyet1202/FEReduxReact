@@ -37,6 +37,8 @@ const BookingSerive = () => {
       .catch((err) => {
         console.log(err);
       });
+
+    alert(`Bạn đã gửi yêu cầu thành công!`);
   };
   return (
     <>
