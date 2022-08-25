@@ -28,7 +28,7 @@ class ScreenReplaceDetail extends Component {
       
         <br></br>
 
-        <div className="ScreenDetail">
+        <div className="screenDetail">
           <div className="ScreenDetail_item">
             <nav className="linking">
               <a className="Itemlinking" href="http://localhost:3000/">
@@ -36,15 +36,15 @@ class ScreenReplaceDetail extends Component {
               </a>
               <span className="divider">/</span>
               <a className="Itemlinking" href="#">
-                Sửa điện thoại SamSung
+               
               </a>
               <span className="divider">/</span>
               <a href="#" className="linItemlinkingking">
-                Thay pin
+                Thay màn hình
               </a>
               <span className="divider">/</span>
               <a href="#" className="Itemlinking">
-                Chi tiết thay pin
+                Chi tiết thay màn hình
               </a>
             </nav>
             <br></br>
@@ -56,7 +56,7 @@ class ScreenReplaceDetail extends Component {
                   <div className="flex-center">
                     <img
                       className="image-wrapper image-wrapper--detail"
-                      // style={{ width: "200px", height: "200px" }}
+                      style={{ width: "200px", height: "200px" }}
                       src={this.state.prodetail.img}
                       alt="file"
                     ></img>
@@ -68,7 +68,7 @@ class ScreenReplaceDetail extends Component {
 
                     <div>
                       <span className="price-wrapper">
-                        {this.state.prodetail.price} VND
+                        {this.state.prodetail.price}VND
                       </span>
                     </div>
                     <div className="flex-center">

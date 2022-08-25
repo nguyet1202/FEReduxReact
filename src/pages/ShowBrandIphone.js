@@ -1,21 +1,21 @@
 import React, { Component } from "react";
 import axios from "axios";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-
-export default class CaseReplacePage extends Component {
+export default class ShowBrandIphone extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      case: [],
+      iphone: [],
     };
   }
   async componentDidMount() {
-    await axios.get(`http://127.0.0.1:8000/api/service/1`).then((res) => {
-      this.setState(() => ({ case: res.data }));
-    });
+    await axios
+      .get(`http://127.0.0.1:8000/api/brand/2/products`)
+      .then((res) => {
+        this.setState(() => ({ iphone: res.data }));
+      });
     console.log("test");
   }
+
   render() {
     return (
       <div>
@@ -27,14 +27,14 @@ export default class CaseReplacePage extends Component {
             </a>
             <span className="divider">/</span>
             <a className="Itemlinking" href="#">
-              Thay pin
+              iphone
             </a>
           </nav>
           <div></div>
           <br></br>
           <div className="prd-container">
-            {this.state.case.map((products, index) => (
-              <a href={`/CaseReplaceDetail/${products.id}`}>
+            {this.state.iphone.map((products, index) => (
+              <a href={`/ShowBrandIphone/${products.id}`}>
                 <div className="prd" key={index}>
                   <img
                     className="prd-img"
@@ -51,9 +51,7 @@ export default class CaseReplacePage extends Component {
               </a>
             ))}
           </div>
-          <br></br>
         </div>
-        {/* <Footer></Footer> */}
       </div>
     );
   }

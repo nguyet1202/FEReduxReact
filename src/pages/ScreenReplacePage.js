@@ -20,7 +20,7 @@ export default class ScreenReplacePage extends Component {
     return (
       <div>
         {/* <Header></Header> */}
-        <div className="Content">
+        <div className="Prd-list">
           <nav className="linking">
             <a className="Itemlinking" href="http://localhost:3000/">
               Trang chủ
@@ -32,20 +32,20 @@ export default class ScreenReplacePage extends Component {
           </nav>
           <div></div>
           <br></br>
-          <div className="container">
+          <div className="prd-container">
             {this.state.screen.map((products, index) => (
               <a href={`/ScreenReplaceDetail/${products.id}`}>
                 <div className="prd" key={index}>
                   <img
-                    className="image-wrapper"
-                    // style={{ width: "200px", height: "200px" }}
+                    className="prd-img"
+                    style={{ width: "200px", height: "200px" }}
                     src={products.img}
                     alt="file"
                   ></img>
-                  <p className="name-wrapper">{products.product_name}</p>
+                  <p className="prd-Name">{products.product_name}</p>
 
                   <div>
-                    <span className="price-wrapper">{products.price}VND</span>
+                    <span className="prd-price">{products.price}VND</span>
                   </div>
                 </div>
               </a>

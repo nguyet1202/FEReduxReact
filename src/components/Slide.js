@@ -14,38 +14,38 @@ export default function Slide() {
 
       <div id="wrap">
         <ul id="slider">
-          <img src="./image/thumbnail-removebg-preview.png" alt="" />
-          <img src="./image/image_46-removebg-preview.png" alt="" />
+          <img src="../image/thumbnail-removebg-preview.png" alt="" />
+          <img src="../image/image_46-removebg-preview.png" alt="" />
           <img
-            src="./image/thay-vo-samsung-galaxy-note-10-plus-removebg-preview.png"
+            src="../image/thay-vo-samsung-galaxy-note-10-plus-removebg-preview.png"
             alt=""
           />
           <img
-            src="./image/sua-chua-phan-cung-dt-removebg-preview.png"
+            src="../image/sua-chua-phan-cung-dt-removebg-preview.png"
             alt=""
           />
 
           <img
-            src="./image/pin-iphone-5-1440mah-original-battery-chinh-hang-2-removebg-preview.png"
+            src="../image/pin-iphone-5-1440mah-original-battery-chinh-hang-2-removebg-preview.png"
             alt=""
           />
           <img
-            src="./image/images-removebg-preview-removebg-preview.png"
+            src="../image/images-removebg-preview-removebg-preview.png"
             alt=""
           />
           <img
-            src="./image/thay-man-hinh-ipad-2-3g-a1396-a1397-removebg-preview.png"
+            src="../image/thay-man-hinh-ipad-2-3g-a1396-a1397-removebg-preview.png"
             alt=""
           />
-          <img src="./image/lcd-xs-300x300-removebg-preview.png" alt="" />
+          <img src="../image/lcd-xs-300x300-removebg-preview.png" alt="" />
 
-          <img src="./image/O-cung-Macbook-removebg-preview.png" alt="" />
+          <img src="../image/O-cung-Macbook-removebg-preview.png" alt="" />
           <img
-            src="./image/sua-iphone-bi-soc-man-hinh-1-removebg-preview.png"
+            src="../image/sua-iphone-bi-soc-man-hinh-1-removebg-preview.png"
             alt=""
           />
-          <img src="./image/hinh-nen-man-hinh-hong.jpg" alt="" />
-          <img src="./image/pin-XS-Max-removebg-preview.png" alt="" />
+          <img src="../image/hinh-nen-man-hinh-hong.jpg" alt="" />
+          <img src="../image/pin-XS-Max-removebg-preview.png" alt="" />
         </ul>
       </div>
       {/* <div id="opts">

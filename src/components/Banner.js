@@ -1,22 +1,24 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 export default function Banner() {
   return (
-    <div>
-        <div className="question"><h5>Thiết bị nào của bạn đang gặp vấn đề?</h5></div>
-      <div className="banner">
-        <div className="banner_item">
+    <div id="banner">
+      <div>
+        <p className="question">Thiết bị nào của bạn đang gặp vấn đề?</p>
+      </div>
+      <div className="banner-bottom">
+        <a className="banner_item" href="/ShowIphone">
           <img src="https://huydungmobile.com/wp-content/uploads/2021/03/iphone.jpg"></img>
-        </div>
-        <div className="banner_item">
+        </a>
+        <a className="banner_item" href="/ShowSamsung">
           <img src="https://huydungmobile.com/wp-content/uploads/2021/03/samsung.jpg"></img>
-        </div>
-        <div className="banner_item">
+        </a>
+        <a className="banner_item" href="/ShowXiaomi">
           <img src="https://huydungmobile.com/wp-content/uploads/2021/03/xiaomi.jpg"></img>
-        </div>
-        <div className="banner_item">
-          <img src="https://huydungmobile.com/wp-content/uploads/2021/03/oppo.jpg"></img>
-        </div>
+        </a>
+        <a className="banner_item" href="/ShowLG">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbWnwuyMb5_75sVS8BRPabtxmh2w5IpHD74Ezgxnau5m0XYQ9aGBcJ-vNQWJLL83gZLpw&usqp=CAU"></img>
+        </a>
       </div>
     </div>
   );

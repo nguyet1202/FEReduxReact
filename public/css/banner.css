@@ -1,26 +1,47 @@
-.question{
-    
-    text-align: center;
+#banner {
     background-color: #D9D9D9;
+}
+
+.question {
+    padding-top: 10px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 500;
     height: 25px;
 }
-.banner {
-    background-color: #D9D9D9;
+
+.banner-bottom {
+
     display: flex;
-    height: 60px;
+    flex-wrap: wrap;
+    height: auto;
     justify-content: center;
     padding: 15px 30px;
 
 
 }
- 
-.banner img {
+
+.banner-bottom img {
     width: 135px;
     height: 35px;
     padding: 5px;
-   
+
     border-radius: 10px;
 }
-.banner img:hover{
+
+.banner-bottom img:hover {
     box-shadow: 1px 1px 1px #ffffff12, 0 0 10px #98959594, 0 0 8px #908c8c00;
+}
+
+@media only screen and (max-width: 500px) {
+    .banner-bottom {
+        margin-top: 10px;
+
+    }
+
+    .question {
+        font-size: 15px;
+        font-weight: 500;
+        height: auto;
+    }
 }

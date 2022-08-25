@@ -9,7 +9,7 @@ ul {
     list-style: none;
 }
 
-#wrap {
+#wrap {z-index: 1;
     /* background-color: rgba(56, 56, 56, 0.268); */
     position: relative;
     width: 90%;

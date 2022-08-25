@@ -11,7 +11,7 @@ const ProductList = ({ title, list }) => {
     <div className="product-list">
       <h2 className="title-content">{title}</h2>
       <br></br>
-      <div className="container">
+      <div className="prd-container">
         {list.map((product, index) => {
           var cate = "";
           switch (product.service_id) {
@@ -38,7 +38,7 @@ const ProductList = ({ title, list }) => {
                 ></img>
                 <p className="prd-name">{product.product_name}</p>
                 <div>
-                  <span className="prd-price">{product.price} VND</span>
+                  <span className="prd-price">{product.price}VND</span>
                 </div>
               </Link>
             </div>
@@ -69,8 +69,7 @@ export default class Content extends Component {
     console.log(this.state);
     return (
       <div>
-      {/* <Slide></Slide>
-      <Banner></Banner> */}
+      
         <div className="contents">
           {this.state.services.map((service) => (
             <ProductList

@@ -26,6 +26,10 @@ import "./assets/css/index.css";
 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import ShowBrandSamsung from './pages/ShowBrandSamsung';
+import ShowBrandIphone from './pages/ShowBrandIphone';
+import ShowBrandXiaomi from './pages/ShowBrandXiaomi';
+import ShowBrandLG from './pages/ShowBrandLG';
 
 
 function App() {
@@ -36,6 +40,10 @@ function App() {
         <Route path="/" element={<Content />} />
         <Route path="/Slide" element={<Slide />} />
         <Route path="/BatteryReplace" element={<BatteryReplacePage />} />
+        <Route path="/ShowSamsung" element={<ShowBrandSamsung />} />
+        <Route path="/ShowIphone" element={<ShowBrandIphone />} />
+        <Route path="/ShowXiaomi" element={<ShowBrandXiaomi />} />
+        <Route path="/ShowLG" element={<ShowBrandLG />} />
         <Route path="/CaseReplace" element={<CaseReplacePage />} />
         <Route path="/ScreenReplace" element={<ScreenReplacePage />} />
         <Route path="/HardwareReplace" element={<HardwareReplacePage />} />
@@ -54,10 +62,7 @@ function App() {
           path="/HardwareReplaceDetail/:id"
           element={<HardwareReplaceDetail />}
         />
-        <Route
-          path="/MainReplaceDetail/:id"
-          element={<MainReplaceDetail />}
-        />
+        <Route path="/MainReplaceDetail/:id" element={<MainReplaceDetail />} />
         <Route path="/AboutUs" element={<AboutUs />} />
         <Route path="/InforForm" element={<InforForm />} />
         <Route path="/Search" element={<Search />} />

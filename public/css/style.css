@@ -5,6 +5,7 @@
  
 .Footer-middle{
     display: flex;
+    flex-wrap: wrap;
     padding: 0 5rem;
     justify-content: space-between;
 }
@@ -36,13 +37,7 @@
 }
 
 /*---------------------screen detail ------------------*/
-.ScreenDetail{
-    position: relative;
-    margin-left: 300px;
-    margin-right: 300px;
-   
 
-}
 .linking{
     color: black;
     margin-left: 65px;

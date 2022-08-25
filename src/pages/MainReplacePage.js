@@ -19,8 +19,8 @@ export default class CaseReplacePage extends Component {
   render() {
     return (
       <div>
-        <Header></Header>
-        <div className="Content">
+        
+        <div className="prd-list">
           <nav className="linking">
             <a className="Itemlinking" href="http://localhost:3000/">
               Trang chủ
@@ -32,19 +32,19 @@ export default class CaseReplacePage extends Component {
           </nav>
           <div></div>
           <br></br>
-          <div className="container">
+          <div className="prd-container">
             {this.state.case.map((products, index) => (
               <div className="prd" key={index}>
                 <img
-                  className="image-wrapper"
+                  className="prd-img"
                   style={{ width: "200px", height: "200px" }}
                   src={products.img}
                   alt="file"
                 ></img>
-                <p className="name-wrapper">{products.product_name}</p>
+                <p className="prd-name">{products.product_name}</p>
 
                 <div>
-                  <span className="price-wrapper">{products.price}VND</span>
+                  <span className="prd-price">{products.price}VND</span>
                 </div>
               </div>
             ))}

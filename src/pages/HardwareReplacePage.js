@@ -12,7 +12,7 @@ export default class HardwareReplacePage extends Component {
     };
   }
   async componentDidMount() {
-    await axios.get(`http://127.0.0.1:8000/api/service/1`).then((res) => {
+    await axios.get(`http://127.0.0.1:8000/api/service/4`).then((res) => {
       this.setState({ hardware: res.data });
     });
     console.log("test");
@@ -21,32 +21,32 @@ export default class HardwareReplacePage extends Component {
     return (
       <div>
         {/* <Header></Header> */}
-        <div className="Content">
+        <div className="prd-list">
           <nav className="linking">
             <a className="Itemlinking" href="http://localhost:3000/">
               Trang chủ
             </a>
             <span className="divider">/</span>
             <a className="Itemlinking" href="#">
-              Thay pin
+              Thay Phần cứng
             </a>
           </nav>
           <div></div>
           <br></br>
-          <div className="container">
+          <div className="prd-container">
             {this.state.hardware.map((products, index) => (
               <a href={`/HardwareReplaceDetail/${products.id}`}>
                 <div className="prd" key={index}>
                   <img
-                    className="image-wrapper"
-                    // style={{ width: "200px", height: "200px" }}
+                    className="prd-img"
+                    style={{ width: "200px", height: "200px" }}
                     src={products.img}
                     alt="file"
                   ></img>
-                  <p className="name-wrapper">{products.product_name}</p>
+                  <p className="prd-name">{products.product_name}</p>
 
                   <div>
-                    <span className="price-wrapper">{products.price}VND</span>
+                    <span className="prd-price">{products.price}VND</span>
                   </div>
                 </div>
               </a>

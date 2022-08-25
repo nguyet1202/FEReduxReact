@@ -22,31 +22,14 @@ export default class Footer extends Component {
                 <div className="logo">
                   <a
                     class="link"
-                    href="https://www.youtube.com/watch?v=elwqvNykS94&ab_channel=T%C4%90Gaming"
+                    href="https://www.facebook.com/ducchuoc.nguyen"
                   >
                     <p>
                       <img className="footer-icon" src="image/facebook.PNG" />
                       Facebook
                     </p>
                   </a>
-                  <a
-                    class="link"
-                    href="https://www.youtube.com/watch?v=elwqvNykS94&ab_channel=T%C4%90Gaming"
-                  >
-                    <p>
-                      <img className="footer-icon" src="image/youtobe.PNG" />
-                      Youtube
-                    </p>
-                  </a>
-                  <a
-                    class="link"
-                    href="https://www.youtube.com/watch?v=elwqvNykS94&ab_channel=T%C4%90Gaming"
-                  >
-                    <p>
-                      <img className="footer-icon" src="image/logo.PNG" />
-                      Dienthoai24.com
-                    </p>
-                  </a>
+                 
                 </div>
               </div>
               <div className="Footer-content">

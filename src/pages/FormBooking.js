@@ -1,5 +1,5 @@
-import React from "react"; 
-import{ useState } from "react";
+import React from "react";
+import { useState } from "react";
 import axios from "axios";
 import "../assets/css/FormBooking.css";
 
@@ -18,17 +18,17 @@ const BookingSerive = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const postData = {
-        service_name,
-        type_device,
-        cus_name,
-        phone_name,
-        phone_emei,
-        model,
-        note,
-        repair_day,
-        received_day,
-        cusphone_number
-    }
+      service_name,
+      type_device,
+      cus_name,
+      phone_name,
+      phone_emei,
+      model,
+      note,
+      repair_day,
+      received_day,
+      cusphone_number,
+    };
     axios
       .post(`http://localhost:8000/api/customers`, postData)
       .then((res) => {
@@ -37,6 +37,10 @@ const BookingSerive = () => {
       .catch((err) => {
         console.log(err);
       });
+
+    alert(`Bạn đã gửi yêu cầu thành công!
+    Hãy đợi liên lạc từ chúng tôi.
+    `);
   };
   return (
     <>
@@ -44,7 +48,9 @@ const BookingSerive = () => {
         <form onSubmit={handleSubmit}>
           <span className="tile_booking">THÔNG TIN SỬA CHỮA</span>
           <div className="form-group">
-            <label className="phone_name" htmlFor="phone_name">Nhập tên thiết bị: </label>
+            <label className="phone_name" htmlFor="phone_name">
+              Nhập tên thiết bị:{" "}
+            </label>
             <input
               type="text"
               className="form-control"
